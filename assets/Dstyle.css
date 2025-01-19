@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Section */
+.header {
+    background-color: #0066cc;
+    padding: 10px;
+    text-align: center;
+}
+
+.header .dashboard-link {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Main Container */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Fieldset Section */
+.fieldset {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.fieldset h1 {
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+.section {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+/* Note Styling */
+.note {
+    text-align: center;
+    color: #555;
+   
+}
+
+/* Form Container Styling */
+.form-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and Button Styling */
+.form-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0066cc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-submit {
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.form-submit:hover {
+    background-color: #004c99;
+}
+
+/* Link Styling */
+.form-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+/* Section Title */
+.form-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,624 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+.navbar {
+  background-color: #dde6ed;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#logo {
+  color: #023e8a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding-right: 50px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #27374d;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+#btnLogin {
+  margin-left: 50px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #023e8a;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+#btnReg {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #023e8a;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+#btn:hover {
+  background-color: #e1e1e1;
+}
+.hero {
+  text-align: center;
+  padding: 5rem 0;
+  color: #fff;
+  background: url("../assets/images/scholarshipBG.jpg") no-repeat center;
+  position: relative;
+  min-height: 50vh;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero-buttons {
+  padding-top: 3rem;
+}
+.hero-buttons .btn {
+  margin: 0 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn.primary {
+  background-color: #dde6ed;
+  color: #023e8a;
+}
+.btn.secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #dde6ed;
+}
+.footer {
+  background-color: #27374d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+.footer p {
+  font-size: 0.7rem;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.form {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+.form-container h2 {
+  text-align: center;
+}
+
+/* Login Form*/
+.login-container {
+  width: 400px;
+}
+
+.login-container .form-group {
+  margin-bottom: 1rem;
+}
+
+.login-container .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.login-container .form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-container .form-group button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #023e8a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Register Form */
+.register-container {
+  margin-top: 2rem;
+  width: 500px;
+}
+
+.register-container .row {
+  display: flex;
+}
+
+.register-container .form-group {
+  flex: 1;
+  margin-bottom: 0.5rem;
+}
+
+.register-container .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.register-container .form-group input,
+.register-container .form-group select {
+  width: 80%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#gender {
+  width: 90%;
+}
+
+.register-container .form-group button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #023e8a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-container .switch,
+.login-container .switch {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.switch a {
+  color: #023e8a;
+  text-decoration: none;
+}
+
+/* admin dashboard */
+
+.admin-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #023e8a;
+    color: white;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 1.5rem 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;;
+    padding: 0.5rem;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #27374d;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f4f4f9;
+}
+
+.content h1 {
+    margin-bottom: 1.5rem;
+}
+
+.overview {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0;
+    color: #023e8a;
+}
+
+.card p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0;
+}
+
+.user-management {
+    margin-top: 2rem;
+}
+
+.user-management table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-management th, .user-management td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.user-management th {
+    background-color: #023e8a;
+    color: white;
+}
+
+.user-management button {
+    background-color: #023e8a;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-management button:hover {
+    background-color: #27374d;
+}
+
+/* user dashboard */
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #023e8a;
+    color: white;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #27374d;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 0rem 2rem;
+    background-color: #f4f4f9;
+}
+
+.content h1 {
+    margin-bottom: 1.5rem;
+}
+
+#userWidget{
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #023e8a;
+}
+
+#userButton {
+    background-color: #023e8a;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#userButton:hover {
+    background-color: #27374d;
+}
+
+
+/* profile */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #023e8a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  padding: 30px;
+  text-align: center;
+}
+
+.profile-card h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border: 2px solid #023e8a;    
+}
+
+th {
+  background-color: #023e8a;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:hover td {
+  background-color: #f1f5ff;
+}
+
+/* news & articles */
+
+.news-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.news-header {
+  background-color: #023e8a;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.news-header h1 {
+  margin: 0;
+}
+
+.news-nav {
+  margin-top: 1rem;
+}
+
+.news-nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.news-nav a:hover {
+  text-decoration: underline;
+}
+
+.news-main {
+  margin-top: 2rem;
+}
+
+.news-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-article {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-article h2 {
+  margin: 0 0 1rem;
+  color: #023e8a;
+}
+
+.news-article p {
+  color: #555;
+}
+
+.news-btn {
+  background-color: #023e8a;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.news-btn:hover {
+  background-color: #3480e3;
+}
+
+.news-btn.delete {
+  background-color: #d9534f;
+}
+
+.news-btn.delete:hover {
+  background-color: #c9302c;
+}
+
+/* create articles */
+
+.addArticles-container {
+  width: 50%;
+  margin: 1rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.addArticles-header {
+  text-align: center;
+}
+
+.addArticles-header h1 {
+  color: #333;
+}
+
+.addArticles-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.addArticles-group {
+  margin-bottom: 1.5rem;
+}
+
+.addArticles-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #023e8a;
+}
+
+.addArticles-group input,
+.addArticles-group select,
+.addArticles-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.addArticles-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addArticles-btn {
+  background-color: #023e8a;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.addArticles-btn:hover {
+  background-color: #27374d;
+}
+
+.addArticles-btn.reset {
+  background-color: #d9534f;
+}
+
+.addArticles-btn.reset:hover {
+  background-color: #c9302c;
+}

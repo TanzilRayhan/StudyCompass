@@ -1,0 +1,68 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Forum Container */
+.forum-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forum-container h1 {
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 1.5rem;
+}
+
+/* Forum Posts */
+.forum-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.forum-post {
+    background-color: #dde6ed;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forum-post h2 {
+    margin: 0;
+    color: #023e8a;
+}
+
+.forum-post p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Forum Actions */
+.forum-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.forum-actions button {
+    background-color: #023e8a;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forum-actions button:hover {
+    background-color: #27374d;
+}
