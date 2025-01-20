@@ -6,6 +6,8 @@ if (!isset($_SESSION['admin'])) {
 }
 require_once('../model/authModel.php');
 require_once('../model/newsModel.php');
+require_once('../model/scholarshipModel.php');
+require_once('../model/uniModel.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     $action = $_POST['action'];
@@ -24,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
 $totalUsers = getTotalUsers();
 $totalNews = getTotalNews();
+$totalScholarship = getTotalScholarship();
+$totalUniversities = getTotalUniversities();
 ?>
 
 <!DOCTYPE html>
@@ -101,9 +105,9 @@ $totalNews = getTotalNews();
             <ul class="nav-links">
                 <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
                 <li><a href="../view/home.php">Home</a></li>
-                <li><a href="">Scholarships</a></li>
-                <li><a href="#">Visa Updates</a></li>
-                <li><a href="#">Rankings</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
                 <li><a href="../view/newsArticles.php">News & Articles</a></li>
                 <li><a href="../controller/logout.php" id="btnLogin">Logout</a></li>
             </ul>
@@ -136,11 +140,11 @@ $totalNews = getTotalNews();
                 </div>
                 <div class="card">
                     <h3>Active Universities</h3>
-                    <p>300</p>
+                    <p><?= number_format($totalUniversities) ?></</p>
                 </div>
                 <div class="card">
                     <h3>Scholarships</h3>
-                    <p>150</p>
+                    <p><?= number_format($totalScholarship) ?></p>
                 </div>
                 <div class="card">
                     <h3>Articles</h3>

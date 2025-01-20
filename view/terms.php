@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +15,25 @@
             background-color: #f9f9f9;
             color: #333;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             color: #0056b3;
         }
+
         h1 {
             text-align: center;
             margin-top: 20px;
         }
+
         h2 {
             margin-top: 20px;
         }
+
         p {
             margin: 10px 0;
         }
+
         main {
             max-width: 800px;
             margin: 20px auto;
@@ -35,6 +42,7 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         footer {
             text-align: center;
             margin-top: 20px;
@@ -42,28 +50,32 @@
             background-color: #0056b3;
             color: white;
         }
+
         a {
             color: #0056b3;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         ul {
             margin: 10px 0 20px 20px;
             list-style: disc;
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container">
             <ul class="nav-links">
                 <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
                 <li><a href="../view/home.php">Home</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Visa Updates</a></li>
-                <li><a href="#">Rankings</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
             </ul>
         </div>
     </nav>
@@ -97,4 +109,5 @@
         <p>&copy; 2025 Your Company Name. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

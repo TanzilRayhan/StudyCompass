@@ -81,9 +81,9 @@ $totalNews = getTotalNews();
             <ul class="nav-links">
                 <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
                 <li><a href="../view/home.php">Home</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Visa Updates</a></li>
-                <li><a href="#">Rankings</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
                 <li><a href="../view/newsArticles.php">News & Articles</a></li>
                 <li><a href="../view/adminDashboard.php" id="btnReg">Dashboard</a></li>
             </ul>

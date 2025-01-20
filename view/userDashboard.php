@@ -83,6 +83,7 @@ if (!$user) {
                     <li><a href="../view/document.php">Documents</a></li>
                     <li><a href="../view/userApplicationTracker.php">Application Tracker</a></li>
                     <li><a href="../view/userBookmark.php">Bookmarks</a></li>
+                    <li><a href="../view/budgetEstimator.php">Budget Estimator</a></li>
                     <li><a href="../controller/logout.php">Logout</a></li>
                 </ul>
             </nav>
@@ -104,7 +105,7 @@ if (!$user) {
                     <li>AI and Machine Learning Scholarship</li>
                     <li>10 Tips for Effective Study</li>
                 </ul>
-                <button id="userButton">Manage Bookmarks</button>
+                <a id="userButton" href="../view/userBookmark.php">Manage Bookmarks</a>
             </section>
             <section id="userWidget" class="notifications">
                 <h2>Recent Notifications</h2>

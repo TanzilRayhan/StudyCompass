@@ -39,6 +39,15 @@ function getAllScholarships()
     return $scholarships;
 }
 
+function getTotalScholarship()
+{
+    $conn = getConnection();
+    $sql = "SELECT COUNT(*) AS total FROM scholarships";
+    $result = mysqli_query($conn, $sql);
+    $data = mysqli_fetch_assoc($result);
+    return $data['total'];
+}
+
 function updateScholarship($id, $name, $university_name, $scholarship_url, $country, $budget, $course, $deadline, $eligibility, $description)
 {
     $conn = getConnection();

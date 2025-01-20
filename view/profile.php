@@ -68,9 +68,9 @@ if (isset($_REQUEST['action']) && $_REQUEST['action'] === 'fetchProfile') {
             <ul class="nav-links">
                 <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
                 <li><a href="../view/home.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
                 <li><a href="../view/userDashboard.php" id="btnReg">Dashboard</a></li>
             </ul>
         </div>

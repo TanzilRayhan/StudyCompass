@@ -5,11 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Study Abroad</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+
 </head>
 
 <body>
-    <div>
-        <h1>Frequently Asked Questions (FAQ) - Study Abroad</h1>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
+                <li><a href="../view/home.php">Home</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
+                <li><a href="../view/userDashboard.php" id="btnReg">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div style="width: 60%; margin:auto">
+        <h2 style="text-align: center; color: navy">Frequently Asked Questions (FAQ) - Study Abroad</h2>
 
         <div>
             <h3>1. What are the best countries for studying abroad?</h3>

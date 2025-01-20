@@ -11,12 +11,22 @@ if (!isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Necessary Documents</title>
+    <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="../assets/Dstyle.css">
 </head>
 <body>
-    <div class="header">
-        <a href="userDashboard.php" class="dashboard-link">Dashboard</a>
-    </div>
+<nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
+                <li><a href="../view/home.php">Home</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
+                <li><a href="../view/userDashboard.php" id="btnReg">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <div class="fieldset">
             <h1>All Necessary Documents</h1>

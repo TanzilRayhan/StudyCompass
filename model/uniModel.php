@@ -26,6 +26,15 @@ function getAllUniversities()
     return $universities;
 }
 
+function getTotalUniversities()
+{
+    $conn = getConnection();
+    $sql = "SELECT COUNT(*) AS total FROM universities";
+    $result = mysqli_query($conn, $sql);
+    $data = mysqli_fetch_assoc($result);
+    return $data['total'];
+}
+
 function addUniversity($name, $location, $major,  $website)
 {
     $conn = getConnection();

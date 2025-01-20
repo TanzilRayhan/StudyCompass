@@ -77,14 +77,15 @@ $username = $_SESSION['user'];
 </head>
 
 <body>
-<nav class="navbar">
+    <nav class="navbar">
         <div class="container">
             <ul class="nav-links">
                 <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
                 <li><a href="../view/home.php">Home</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Visa Updates</a></li>
-                <li><a href="#">Rankings</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
+                <li><a href="../view/userDashboard.php" id="btnReg">Dashboard</a></li>
             </ul>
         </div>
     </nav>
@@ -96,16 +97,16 @@ $username = $_SESSION['user'];
     </form>
 
     <?php if (isset($_GET['status']) && isset($_GET['response'])): ?>
-    <div class="result">
-        <p><span class="status">Status:</span> <?php echo htmlspecialchars($_GET['status']); ?></p>
-        <p><span class="status">Response:</span> <?php echo htmlspecialchars($_GET['response']); ?></p>
-    </div>
+        <div class="result">
+            <p><span class="status">Status:</span> <?php echo htmlspecialchars($_GET['status']); ?></p>
+            <p><span class="status">Response:</span> <?php echo htmlspecialchars($_GET['response']); ?></p>
+        </div>
     <?php endif; ?>
 
     <?php if (isset($_GET['new_application']) && $_GET['new_application'] == 'true'): ?>
-    <script>
-        alert("New application has been added for tracking.");
-    </script>
+        <script>
+            alert("New application has been added for tracking.");
+        </script>
     <?php endif; ?>
 
     <div class="back-button">

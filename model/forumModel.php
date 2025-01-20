@@ -1,12 +1,12 @@
 <?php
-
 require_once('../model/database.php');
 
-function getPosts() {
+// Get all forum posts with reactions
+function getAllPosts() {
     $conn = getConnection();
     $sql = "
-        SELECT posts.*,
-               COALESCE(like_count, 0) AS likes,
+        SELECT posts.id, posts.title, posts.content, posts.author, 
+               COALESCE(like_count, 0) AS likes, 
                COALESCE(dislike_count, 0) AS dislikes
         FROM posts
         LEFT JOIN (
@@ -14,19 +14,20 @@ function getPosts() {
             FROM reactions
             WHERE reaction_type = 'like'
             GROUP BY post_id
-        ) likes ON posts.id = likes.post_id
+        ) AS likes ON posts.id = likes.post_id
         LEFT JOIN (
             SELECT post_id, COUNT(*) AS dislike_count
             FROM reactions
             WHERE reaction_type = 'dislike'
             GROUP BY post_id
-        ) dislikes ON posts.id = dislikes.post_id
+        ) AS dislikes ON posts.id = dislikes.post_id
         ORDER BY posts.id DESC
     ";
+
     $result = mysqli_query($conn, $sql);
 
     if (!$result) {
-        die("Error in query: " . mysqli_error($conn));
+        return [];
     }
 
     $posts = [];
@@ -35,23 +36,9 @@ function getPosts() {
     }
     return $posts;
 }
-
-function addPost($title, $content, $author_id, $author_type) {
+function createPost($title, $content, $author) {
     $conn = getConnection();
-    $sql = "INSERT INTO posts (title, content, author_id, author_type) VALUES ('{$title}', '{$content}', '{$author_id}', '{$author_type}')";
-    return mysqli_query($conn, $sql);
-}
-
-function reactToPost($post_id, $user_id, $reaction) {
-    $conn = getConnection();
-    $sql = "SELECT * FROM reactions WHERE post_id='{$post_id}' AND user_id='{$user_id}'";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        $sql = "UPDATE reactions SET reaction_type='{$reaction}' WHERE post_id='{$post_id}' AND user_id='{$user_id}'";
-    } else {
-        $sql = "INSERT INTO reactions (post_id, user_id, reaction_type) VALUES ('{$post_id}', '{$user_id}', '{$reaction}')";
-    }
+    $sql = "INSERT INTO posts (title, content, author) VALUES ('$title', '$content', '$author')";
     return mysqli_query($conn, $sql);
 }
 ?>

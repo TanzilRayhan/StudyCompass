@@ -39,11 +39,14 @@ $applications = getAllApplications();
             border-collapse: collapse;
         }
 
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid #ddd;
         }
 
-        th, td {
+        th,
+        td {
             padding: 0.8rem;
             text-align: center;
         }
@@ -73,14 +76,16 @@ $applications = getAllApplications();
 </head>
 
 <body>
-<nav class="navbar">
+    <nav class="navbar">
         <div class="container">
             <ul class="nav-links">
                 <li><a href="../view/home.php" id="logo">StudyCompass</a></li>
                 <li><a href="../view/home.php">Home</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Visa Updates</a></li>
-                <li><a href="#">Rankings</a></li>
+                <li><a href="../view/universitiesUser.php">Universities</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/showEvents.php">Events</a></li>
+                <li><a href="../view/newsArticles.php">News & Articles</a></li>
+                <li><a href="../view/adminDashboard.php" id="btnReg">Dashboard</a></li>
             </ul>
         </div>
     </nav>
