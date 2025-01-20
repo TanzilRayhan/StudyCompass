@@ -77,11 +77,12 @@ if (!$user) {
             <hr>
             <nav>
                 <ul>
-                    <li><a href="../view/profile.php">Profile Information</a></li>
-                    <li><a href="../view/document.php">Documents</a></li>
+                    <li><a href="../view/profile.php">Profile Information</a></li>    
                     <li><a href="../view/userScholarships.php">Scholarships</a></li>
-                    <li><a href="../view/budgetEstimator.php">Budget Estimator</a></li>
                     <li><a href="../view/universitiesUser.php">Universities</a></li>
+                    <li><a href="../view/document.php">Documents</a></li>
+                    <li><a href="../view/userApplicationTracker.php">Application Tracker</a></li>
+                    <li><a href="../view/userBookmark.php">Bookmarks</a></li>
                     <li><a href="../controller/logout.php">Logout</a></li>
                 </ul>
             </nav>

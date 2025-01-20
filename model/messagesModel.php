@@ -1,7 +1,7 @@
 <?php
     function getconn()
     {
-        $conn = mysqli_connect('127.0.0.1', 'root', '', 'study_compass');
+        $conn = mysqli_connect('127.0.0.1', 'root', '', 'studyCompass');
         return $conn;
     }
 

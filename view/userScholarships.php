@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('location: ../view/login.php');
+    exit();
+}
+$username = $_SESSION['user'];
+
 require_once('../model/scholarshipModel.php');
 
 $scholarships = getAllScholarships();
@@ -12,9 +19,7 @@ $scholarships = getAllScholarships();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholarships</title>
     <link rel="stylesheet" href="../assets/styles.css">
-    <!-- css -->
     <style>
-        
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -130,6 +135,7 @@ $scholarships = getAllScholarships();
             <th>Course</th>
             <th>Deadline</th>
             <th>Website</th>
+            <th>Action</th>
         </tr>
         <?php if (!empty($scholarships)): ?>
             <?php foreach ($scholarships as $scholarship): ?>
@@ -141,11 +147,18 @@ $scholarships = getAllScholarships();
                     <td><?php echo htmlspecialchars($scholarship['course']); ?></td>
                     <td><?php echo htmlspecialchars($scholarship['deadline']); ?></td>
                     <td><a href="<?php echo htmlspecialchars($scholarship['scholarship_url']); ?>" target="_blank">Visit</a></td>
+                    <td>
+                        <form action="../controller/bookmarkCheck.php" method="POST" style="margin: 0;">
+                            <input type="hidden" name="scholarship_id" value="<?php echo $scholarship['id']; ?>">
+                            <input type="hidden" name="username" value="<?php echo $username; ?>">
+                            <button type="submit">Bookmark</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>
             <tr>
-                <td colspan="7">No scholarships available.</td>
+                <td colspan="8">No scholarships available.</td>
             </tr>
         <?php endif; ?>
     </table>
@@ -169,7 +182,7 @@ $scholarships = getAllScholarships();
                 if (this.status === 200) {
                     const scholarships = JSON.parse(this.responseText);
                     const table = document.getElementById('scholarshipTable');
-                    table.innerHTML = `
+                    table.innerHTML = ` 
                         <tr>
                             <th>Name</th>
                             <th>University</th>
@@ -178,6 +191,7 @@ $scholarships = getAllScholarships();
                             <th>Course</th>
                             <th>Deadline</th>
                             <th>Website</th>
+                            <th>Action</th>
                         </tr>
                     `;
                     if (scholarships.length > 0) {
@@ -191,6 +205,13 @@ $scholarships = getAllScholarships();
                                     <td>${scholarship.course}</td>
                                     <td>${scholarship.deadline}</td>
                                     <td><a href="${scholarship.scholarship_url}" target="_blank">Visit</a></td>
+                                    <td>
+                                        <form action="../controller/bookmarkCheck.php" method="POST" style="margin: 0;">
+                                            <input type="hidden" name="scholarship_id" value="${scholarship.id}">
+                                            <input type="hidden" name="username" value="<?php echo $username; ?>">
+                                            <button type="submit">Bookmark</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             `;
                             table.innerHTML += row;
