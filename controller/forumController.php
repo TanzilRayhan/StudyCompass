@@ -1,35 +1,32 @@
 <?php
 require_once('../model/forumModel.php');
+header('Content-Type: application/json');
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'fetchPosts') {
+    $posts = getAllPosts();
+    echo json_encode($posts);
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $action = $_POST['action'];
+    $data = json_decode(file_get_contents('php://input'), true);
 
-    if ($action === 'addPost') {
-        $title = trim($_POST['title']);
-        $content = trim($_POST['content']);
-        $author_id = intval($_POST['author_id']);
-        $author_type = $_POST['author_type'];
+    if ($data['action'] === 'createPost') {
+        $title = trim($data['title']);
+        $content = trim($data['content']);
+        $author = trim($data['username']); 
 
-        if (!empty($title) && !empty($content) && !empty($author_id) && !empty($author_type)) {
-            if (addPost($title, $content, $author_id, $author_type)) {
-                header('Location: ../view/forum.php');
-                exit();
+        if ($title && $content) {
+            $result = createPost($title, $content, $author);
+            if ($result) {
+                echo json_encode(['success' => true]);
             } else {
-                echo "Error adding post.";
+                echo json_encode(['success' => false, 'error' => 'Failed to create post.']);
             }
-        }
-    }
-
-    if ($action === 'reactToPost') {
-        $post_id = intval($_POST['post_id']);
-        $user_id = intval($_POST['user_id']);
-        $reaction = $_POST['reaction'];
-
-        if (reactToPost($post_id, $user_id, $reaction)) {
-            echo "Reaction updated.";
         } else {
-            echo "Error updating reaction.";
+            echo json_encode(['success' => false, 'error' => 'All fields are required.']);
         }
     }
+    exit();
 }
 ?>

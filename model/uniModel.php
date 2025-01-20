@@ -1,6 +1,6 @@
 <?php
 require_once('../model/database.php');
-// Arif
+
 function getUniversity($id)
 {
     $conn = getConnection();

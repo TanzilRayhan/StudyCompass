@@ -82,6 +82,7 @@ if (!$user) {
                     <li><a href="../view/userScholarships.php">Scholarships</a></li>
                     <li><a href="../view/budgetEstimator.php">Budget Estimator</a></li>
                     <li><a href="../view/universitiesUser.php">Universities</a></li>
+                    <li><a href="../view/loanApplication.php">Financial aid advice</a></li>
                     <li><a href="../controller/logout.php">Logout</a></li>
                 </ul>
             </nav>

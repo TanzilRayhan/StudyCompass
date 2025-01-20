@@ -120,6 +120,7 @@ $totalNews = getTotalNews();
                     <li><a href="../view/universitiesAdmin.php">Manage Universities</a></li>
                     <li><a href="../view/manageEvents.php">Manage Events</a></li>
                     <li><a href="../view/newsAdmin.php">Manage Articles</a></li>
+                    <li><a href="../view/adminLoanPlans.php">Manage Financial Aid Service</a></li>
                     <li><a href="../view/contractShow.php">Manage Notifications</a></li>
                     <li><a href="../controller/logout.php">Logout</a></li>
                 </ul>

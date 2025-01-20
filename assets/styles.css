@@ -622,3 +622,98 @@ tr:hover td {
 .addArticles-btn.reset:hover {
   background-color: #c9302c;
 }
+
+.forum-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forum-post {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.forum-post h2 {
+  margin: 0 0 0.5rem;
+  color: #023e8a;
+}
+
+.forum-post p {
+  margin: 0.5rem 0;
+}
+
+.forum-actions button {
+  background-color: #023e8a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forum-actions button:hover {
+  background-color: #27374d;
+}
+.loan-form {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loan-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.loan-form button {
+  padding: 10px 15px;
+  background-color: #023e8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loan-form button:hover {
+  background-color: #27374d;
+}
+
+.loan-table {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loan-table th, .loan-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.loan-table th {
+  background-color: #023e8a;
+  color: white;
+}
+
+.loan-table td button {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loan-table td button:hover {
+  background-color: #c9302c;
+}
